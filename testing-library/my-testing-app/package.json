@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "@types/jest": "^26.0.23",
@@ -22,6 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "testj": "jest",
+    "test:watch": "NODE_ENV=test jest --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,5 +42,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@types/jsdom": "^16.2.11",
+    "global-jsdom": "^8.1.0",
+    "jsdom": "^16.6.0"
+  },
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ]
 }
